@@ -1,0 +1,64 @@
+.portfolio {
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 110rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.portfoliotitle {
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: #895292;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.projectList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 65rem;
+  flex-wrap: wrap;
+}
+
+.portfolio1 {
+  text-align: center;
+  background-color: #fffbf8;
+  border-radius: 11px;
+  padding: 10px;
+  margin: 1rem;
+}
+
+.img {
+  object-fit: cover;
+  height: 13rem;
+  width: 24rem;
+  margin: 1 rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 585px) {
+  .img {
+    height: 48vw;
+  }
+}
+
+.projectdescription {
+  padding: 0.3rem;
+  color: #796a78;
+  width: 22rem;
+}
+
+.projecttitle {
+  margin-top: 0.3rem;
+  color: #796a78;
+}

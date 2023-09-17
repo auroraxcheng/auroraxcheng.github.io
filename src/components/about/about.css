@@ -1,0 +1,38 @@
+#about {
+  overflow: hidden;
+  width: 80vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: -500px;
+  animation: fadeInUp 5s;
+}
+
+.aboutHeading {
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: #895292;
+  text-align: center;
+  padding-top: -10vh;
+  padding-bottom: 10px;
+}
+
+.aboutContainer {
+  text-align: center;
+}
+
+.aboutDescription {
+  color: #796a78;
+  font-size: 1.5rem;
+  font-weight: 100rem;
+  display: inline-block;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.currently {
+  padding-left: 10%;
+}
