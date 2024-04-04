@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.642c1b73.css",
-    "main.js": "/static/js/main.7609cfbf.js",
-    "static/js/453.48052003.chunk.js": "/static/js/453.48052003.chunk.js",
-    "static/media/IMG_3788.PNG": "/static/media/IMG_3788.775742689add11e9f8d8.PNG",
-    "static/media/pandapath.png": "/static/media/pandapath.71a4742ee00d05d5062b.png",
-    "static/media/bcharity.png": "/static/media/bcharity.0708929b8ad4503b3200.png",
-    "static/media/nomapp.jpg": "/static/media/nomapp.f055d7b4c2165dd3ae2c.jpg",
-    "static/media/volleyballclub.jpg": "/static/media/volleyballclub.af1775b82dd17acf6978.jpg",
-    "static/media/aurorajewelss.jpg": "/static/media/aurorajewelss.a1da7c3744f46fc28de8.jpg",
-    "index.html": "/index.html",
-    "main.642c1b73.css.map": "/static/css/main.642c1b73.css.map",
-    "main.7609cfbf.js.map": "/static/js/main.7609cfbf.js.map",
-    "453.48052003.chunk.js.map": "/static/js/453.48052003.chunk.js.map"
+    "main.css": "/react-gh-pages/static/css/main.642c1b73.css",
+    "main.js": "/react-gh-pages/static/js/main.3dd76d2f.js",
+    "static/js/453.48052003.chunk.js": "/react-gh-pages/static/js/453.48052003.chunk.js",
+    "static/media/IMG_3788.PNG": "/react-gh-pages/static/media/IMG_3788.775742689add11e9f8d8.PNG",
+    "static/media/pandapath.png": "/react-gh-pages/static/media/pandapath.71a4742ee00d05d5062b.png",
+    "static/media/bcharity.png": "/react-gh-pages/static/media/bcharity.0708929b8ad4503b3200.png",
+    "static/media/nomapp.jpg": "/react-gh-pages/static/media/nomapp.f055d7b4c2165dd3ae2c.jpg",
+    "static/media/volleyballclub.jpg": "/react-gh-pages/static/media/volleyballclub.af1775b82dd17acf6978.jpg",
+    "static/media/aurorajewelss.jpg": "/react-gh-pages/static/media/aurorajewelss.a1da7c3744f46fc28de8.jpg",
+    "index.html": "/react-gh-pages/index.html",
+    "main.642c1b73.css.map": "/react-gh-pages/static/css/main.642c1b73.css.map",
+    "main.3dd76d2f.js.map": "/react-gh-pages/static/js/main.3dd76d2f.js.map",
+    "453.48052003.chunk.js.map": "/react-gh-pages/static/js/453.48052003.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.642c1b73.css",
-    "static/js/main.7609cfbf.js"
+    "static/js/main.3dd76d2f.js"
   ]
 }
