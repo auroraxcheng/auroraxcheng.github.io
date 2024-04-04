@@ -1,0 +1,132 @@
+#intro {
+    /* max-height: calc(100vh - 4rem); */
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .introContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1100px;
+    padding-right: 20px;
+    padding-left: 40px;
+    overflow: hidden;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .introContainer {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+  }
+  
+  .iconContainer {
+    text-align: center;
+    float: left;
+    overflow: visible;
+  }
+  
+  .icon {
+    display: block;
+    height: 70vh;
+  
+    /* object-fit: cover;
+    height: 70vh; */
+  }
+  
+  .introContent {
+    font-family: Arial, Helvetica, sans-serif;
+  
+    height: 50vh;
+    width: 100%;
+    /*padding: 3rem;
+  justify-content: center;*/
+    flex-direction: column;
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    z-index: 1;
+  }
+  
+  .hello {
+    color: #895292;
+    padding-top: 1rem;
+  }
+  
+  .description {
+    font-size: 2rem;
+    color: #796a78;
+    padding-top: 1rem;
+  }
+  
+  .description2 {
+    font-weight: 200;
+    font-size: 1.5rem;
+    color: #796a78;
+    padding-top: 1rem;
+  }
+  
+  .resume {
+    color: white;
+    background-color: #895292;
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 1.5rem;
+    width: 20%;
+  }
+  
+  .resume a {
+    color: white;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 840px) {
+    .icon {
+      right: -10vh;
+    }
+  
+    .introContent {
+      padding: 5rem 0;
+    }
+  }
+  
+  @media screen and (max-width: 280px) {
+    .icon {
+      position: relative;
+    }
+  
+    .introContent {
+      padding: 7rem 0;
+      height: 100%;
+    }
+  }
+  
+  #ig {
+    color: #895292;
+  }
+  
+  .icons {
+    display: flex;
+  }
+  
+  .social {
+    height: 3vw;
+    width: 3vw;
+    margin-right: 0.8rem;
+    margin-left: 0.4rem;
+  }

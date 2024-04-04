@@ -1,0 +1,94 @@
+.navbar {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 5rem;
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background: #ffffff;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+  
+  .title {
+    color: #895292;
+  }
+  
+  .desktopMenuListItem {
+    margin: 2rem;
+    cursor: pointer;
+  }
+  
+  .desktopMenuListItem:hover {
+    color: #895292;
+  }
+  
+  .contactBtn {
+    background: #895292;
+    color: rgb(249, 249, 249);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+  }
+  
+  .active {
+    color: #895292;
+    border-bottom: 1.5px solid #895292;
+  }
+  
+  .mobMenu {
+    display: none;
+    object-fit: cover;
+    height: 1.8rem;
+  }
+  
+  .navMenu {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    height: fit-content;
+    min-width: 15rem;
+    background: #f5f5f5;
+    border-radius: 1rem;
+  }
+  
+  .listItem {
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+  }
+  
+  .contactBtnMobile {
+    background: #895292;
+    color: rgb(249, 249, 249);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 3rem;
+    border-radius: 2rem;
+    margin: 0.25rem;
+  }
+  
+  @media screen and (max-width: 720px) {
+    .mobMenu {
+      display: flex;
+    }
+    .desktopMenu {
+      display: none;
+    }
+    .contactBtn {
+      display: none;
+    }
+  }
