@@ -8,10 +8,7 @@ import {
   Button,
   AppBar,
   Toolbar,
-  Grid,
   Card,
-  CardContent,
-  CardMedia,
   Link,
   IconButton,
   Avatar,
@@ -27,6 +24,39 @@ import EmailIcon from "@mui/icons-material/Email";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import pfp from "./assets/avatar.png";
 import me from "./assets/pfp.jpg";
+import { useEffect, useState } from "react";
+
+const useEmojiCursor = (defaultEmoji = "🍥", hoverEmoji = "⭐️") => {
+  const [currentEmoji, setCurrentEmoji] = useState(defaultEmoji);
+
+  useEffect(() => {
+    const createCursorStyle = (emoji) => {
+      return `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>${emoji}</text></svg>"), auto`;
+    };
+
+    const handleMouseOver = (e) => {
+      const target = e.target;
+      if (
+        target.tagName === "A" ||
+        target.tagName === "button" ||
+        target.closest("a") ||
+        target.closest("button")
+      ) {
+        setCurrentEmoji(hoverEmoji);
+      } else {
+        setCurrentEmoji(defaultEmoji);
+      }
+    };
+
+    document.body.style.cursor = createCursorStyle(currentEmoji);
+    document.addEventListener("mouseover", handleMouseOver);
+
+    return () => {
+      document.body.style.cursor = "default";
+      document.removeEventListener("mouseover", handleMouseOver);
+    };
+  }, [currentEmoji, defaultEmoji, hoverEmoji]);
+};
 
 // edit custom theme
 const theme = createTheme({
@@ -124,6 +154,7 @@ const CurrentlyItem = styled(Box)(({ theme }) => ({
 }));
 
 function App() {
+  useEmojiCursor("🍥", "⭐️");
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (

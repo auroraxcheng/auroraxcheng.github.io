@@ -62,7 +62,8 @@ const experiences = [
     duration: "May 2025 - Present",
     location: "Victoria, BC",
     description: [
-      "Taking ownership of a portal modernization project supporting the Economic Sector",
+      "Analyzed user needs and business requirements for ServiceNow data reporting project, creating comprehensive project documentation",
+      "Generated multiple PowerBI dashboards to visualize data analysis, enabling data-driven decision making",
     ],
     technologies: ["Azure DevOps", "PowerBI"],
   },
