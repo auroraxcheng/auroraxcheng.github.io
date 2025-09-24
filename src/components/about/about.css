@@ -1,38 +1,238 @@
-#about {
-  overflow: hidden;
-  width: 80vw;
-  max-width: 65rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.about {
+  padding: 10px 0;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding-top: -500px;
-  animation: fadeInUp 5s;
+  padding: 0 100px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.aboutHeading {
-  margin: 1rem 0;
-  font-size: 2rem;
-  color: #895292;
-  text-align: center;
-  padding-top: -10vh;
-  padding-bottom: 10px;
+.aboutmeimg {
+  flex-shrink: 0;
 }
 
-.aboutContainer {
-  text-align: center;
+.pfp {
+  width: 320px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 16px;
 }
 
-.aboutDescription {
-  color: #796a78;
-  font-size: 1.5rem;
-  font-weight: 100rem;
-  display: inline-block;
-  text-align: left;
-  line-height: 1.3;
+.about-content {
+  flex: 1 1 0;
+  padding-top: 40px;
+  min-width: 0;
 }
 
-.currently {
-  padding-left: 10%;
+.about-heading {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 2.8rem;
+  font-weight: 450;
+  color: #1f2937;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.list {
+  list-style: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #333133;
+  font-weight: 300;
+}
+
+.list p {
+  margin-bottom: 0px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.list p:hover {
+  color: #1f2937;
+  transform: translateX(5px);
+}
+
+.list p {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.list p:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.list p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.list p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.list p:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.about-chips {
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  width: 100%;
+  max-width: 90%;
+  display: block;
+}
+
+.about-chips-track {
+  display: inline-flex;
+  gap: 12px;
+  white-space: nowrap;
+  will-change: transform;
+  animation: chips-scroll 25s linear infinite;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 28px;
+  background: #eaeaea;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+}
+
+@keyframes chips-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.business-link {
+  color: #1f2937;
+  text-decoration: underline;
+  text-decoration-color: #d1d5db;
+  text-underline-offset: 3px;
+  transition: all 0.3s ease;
+}
+
+.business-link:hover {
+  color: #6b7280;
+  text-decoration-color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .about-chips-track {
+    animation-duration: 20s;
+  }
+  .about-chips {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 50px;
+  }
+  
+  .profile-photo {
+    width: 260px;
+    height: 340px;
+  }
+  
+  .about-heading {
+    font-size: 2.4rem;
+  }
+  
+  .about-list {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 0;
+  }
+  
+  .about-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  
+  .aboutmeimg {
+    align-self: center;
+  }
+  
+  .pfp {
+    width: 280px;
+    height: 360px;
+  }
+  
+  .about-content {
+    padding-top: 0;
+  }
+  
+  .about-heading {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .about-list {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0 15px;
+  }
+  
+  .pfp {
+    width: 250px;
+    height: 320px;
+  }
+  
+  .about-heading {
+    font-size: 2rem;
+  }
+  
+  .about-list {
+    font-size: 1rem;
+  }
+  
+  .list li {
+    padding-left: 25px;
+    margin-bottom: 15px;
+  }
 }

@@ -1,100 +1,38 @@
-import React, { useState } from "react";
-import "./navbar.css";
-import { Link } from "react-scroll";
-import menu from "../../assets/hamburger-menu.png";
+import React from 'react';
+import './Navbar.css';
+import avatar from '../../assets/avatar.png';
+import { Avatar } from '@mui/material';
+import resume from '../../assets/resume.pdf'
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
   return (
     <nav className="navbar">
-      <h2 className="title"> aurora cheng</h2>
-      <div className="desktopMenu">
-        <Link
-          activeClass="active"
-          to="intro"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          home
-        </Link>
-        <Link
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          about
-        </Link>
-        <Link
-          activeClass="active"
-          to="portfolio"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          portfolio
-        </Link>
-      </div>
-
-      <a href="mailto:auroraxcheng@gmail.com">
-        <button className="contactBtn">contact me</button>
-      </a>
-
-      <img
-        src={menu}
-        alt="menu"
-        className="mobMenu"
-        onClick={() => setShowMenu(!showMenu)}
-      />
-      <div className="navMenu" style={{ display: showMenu ? "flex" : "none" }}>
-        <Link
-          activeClass="active"
-          to="intro"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-          className="listItem"
-          onClick={() => setShowMenu(false)}
-        >
-          home
-        </Link>
-        <Link
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-          className="listItem"
-          onClick={() => setShowMenu(false)}
-        >
-          about
-        </Link>
-        <Link
-          activeClass="active"
-          to="portfolio"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-          className="listItem"
-          onClick={() => setShowMenu(false)}
-        >
-          portfolio
-        </Link>
-        <a href="mailto:auroraxcheng@gmail.com">
-          <button className="contactBtnMobile">contact me</button>
-        </a>
+      <div className="nav-container">
+        <div className="nav-profile">
+        <Avatar
+              src={avatar}
+              alt="Aurora Cheng"
+              sx={{
+                width: 48,
+                height: 48,
+                display: "flex",
+              }}
+            />
+        </div>
+        
+        <div className="nav-links">
+          <a href="#home" className="nav-link">home</a>
+          <a href="#about" className="nav-link">about</a>
+          <a href="#experience" className="nav-link">experience</a>
+          <a 
+            href={resume} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="nav-link resume-link"
+          >
+            resume
+          </a>
+        </div>
       </div>
     </nav>
   );

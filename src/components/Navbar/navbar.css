@@ -1,94 +1,92 @@
 .navbar {
-  font-family: Arial, Helvetica, sans-serif;
-  height: 5rem;
-  width: 100vw;
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  background: #f5f5f5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #F4F1F1;
+  z-index: 1000;
+}
 
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 3;
+  height: 80px;
 }
 
-.title {
-  color: #895292;
+.nav-profile {
+  display: flex;
+  align-items: center;
 }
 
-.desktopMenuListItem {
-  margin: 2rem;
+.profile-icon {
+  font-size: 48px;
   cursor: pointer;
 }
 
-.desktopMenuListItem:hover {
-  color: #895292;
-}
-
-.contactBtn {
-  background: #895292;
-  color: rgb(249, 249, 249);
-  border: none;
+.nav-links {
   display: flex;
+  gap: 55px;
   align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
 }
 
-.active {
-  color: #895292;
-  border-bottom: 1.5px solid #895292;
+.nav-link {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #333131;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
-.mobMenu {
-  display: none;
-  object-fit: cover;
-  height: 1.8rem;
+.nav-link:hover {
+  color: #374151;
 }
 
-.navMenu {
+.nav-link::after {
+  content: '';
   position: absolute;
-  top: 4rem;
-  right: 2rem;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  height: fit-content;
-  min-width: 15rem;
-  background: #f5f5f5;
-  border-radius: 1rem;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #333131;
+  transition: width 0.3s ease;
 }
 
-.listItem {
-  padding: 0.5rem 3rem;
-  margin: 0.25rem;
+.nav-link:hover::after {
+  width: 100%;
 }
 
-.contactBtnMobile {
-  background: #895292;
-  color: rgb(249, 249, 249);
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 3rem;
-  border-radius: 2rem;
-  margin: 0.25rem;
-}
-
-@media screen and (max-width: 720px) {
-  .mobMenu {
-    display: flex;
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 20px;
+    height: 70px;
   }
-  .desktopMenu {
-    display: none;
+  
+  .nav-links {
+    gap: 20px;
   }
-  .contactBtn {
-    display: none;
+  
+  .nav-link {
+    font-size: 1rem;
+  }
+  
+  .profile-icon {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
   }
 }
